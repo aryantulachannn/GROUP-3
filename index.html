@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Catalogue 2030</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Inter", Arial, sans-serif;
+      background: #0f0f0f;
+      color: #f2f2f2;
+    }
+
+    /* HEADER */
+    header {
+      background: #111;
+      padding: 35px 20px;
+      text-align: center;
+      border-bottom: 1px solid #222;
+    }
+
+    .catalogue-title {
+      font-size: 38px;
+      font-weight: 800;
+      color: #ff7a00;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .catalogue-sub {
+      color: #ccc;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    /* MAIN */
+    main {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .intro h2 {
+      font-size: 26px;
+      color: #ff7a00;
+    }
+
+    .intro p {
+      max-width: 600px;
+      margin: 10px auto;
+      color: #bbb;
+      font-size: 15px;
+    }
+
+    /* PRODUCT GRID */
+    .catalogue-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
+    }
+
+    .product-card {
+      background: #1a1a1a;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #262626;
+      transition: 0.25s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      border-color: #ff7a00;
+      box-shadow: 0 6px 20px rgba(255, 122, 0, 0.15);
+    }
+
+    .product-image {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 15px;
+    }
+
+    .product-name {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #fff;
+    }
+
+    .product-desc {
+      font-size: 13px;
+      color: #aaa;
+      margin-bottom: 10px;
+    }
+
+    .product-price {
+      font-size: 16px;
+      font-weight: 700;
+      color: #ff7a00;
+    }
+
+    .product-card button {
+      margin-top: 12px;
+      padding: 8px 14px;
+      background: #ff7a00;
+      color: #111;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
+
+    .product-card button:hover {
+      background: #ff8f26;
+    }
+
+    /* THUMBNAIL GALLERY */
+    .thumb-row {
+      display: flex;
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    .thumb {
+      width: 30%;
+      height: 55px;
+      object-fit: cover;
+      border-radius: 5px;
+      border: 1px solid #333;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .thumb:hover {
+      opacity: 0.8;
+      border-color: #ff7a00;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111;
+      color: #777;
+      text-align: center;
+      padding: 25px;
+      margin-top: 50px;
+      border-top: 1px solid #222;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1 class="catalogue-title">Product Catalogue 2030</h1>
+    <p class="catalogue-sub">Sleek • Modern • Professional</p>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- Intro Section -->
+    <section class="intro">
+      <h2>Featured Collection</h2>
+      <p>
+        Explore our premium 2030 product line — engineered with modern aesthetics, 
+        durability, and performance in mind.
+      </p>
+    </section>
+
+    <!-- PRODUCT GRID -->
+    <section id="catalogue">
+      <div class="catalogue-grid">
+
+        <!-- PRODUCT 1: Wireless Headphones (with gallery) -->
+        <div class="product-card">
+          <img class="product-image" src="https://images.unsplash.com/photo-1580894908361-967195033f6c" alt="Wireless Headphones">
+          
+          <div class="product-info">
+            <h3 class="product-name">Wireless Headphones</h3>
+            <p class="product-desc">Noise‑cancelling, lightweight, immersive sound.</p>
+
+            <!-- Thumbnail Gallery -->
+            <div class="thumb-row">
+              <img class="thumb" src="https://images.unsplash.com/photo-1580894908361-967195033f6c">
+              <img class="thumb" src="https://images.unsplash.com/photo-1580894732444-8ecdedc928d2">
+              <img class="thumb" src="https://images.unsplash.com/photo-1580894908361-967195033f6c?q=80&w=400">
+            </div>
+
+            <p class="product-price">$129.99</p>
+            <button>Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 2 -->
+        <div class="product-card">
+          <img class="product-image" src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="Smartwatch">
+          <div class="product-info">
+            <h3 class="product-name">Smartwatch Pro</h3>
+            <p class="product-desc">Track fitness, health, and notifications.</p>
+            <p class="product-price">$199.99</p>
+            <button>Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 3 -->
+        <div class="product-card">
+          <img class="product-image" src="https://images.unsplash.com/photo-1503602642458-232111445657" alt="Backpack">
+          <div class="product-info">
+            <h3 class="product-name">Urban Backpack</h3>
+            <p class="product-desc">Minimalist, durable, everyday carry.</p>
+            <p class="product-price">$59.99</p>
+            <button>Add to Cart</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2030 Modern Catalogue — Designed with Precision & Style</p>
+  </footer>
+
+</body>
+</html>
