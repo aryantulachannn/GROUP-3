@@ -2,17 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
+    <style>
+        body { font-family: Arial; max-width: 500px; margin: 50px auto; padding: 20px; }
+        .form-group { margin-bottom: 15px; }
+        input, textarea { width: 100%; padding: 8px; }
+        button { background: #007bff; color: white; padding: 10px 20px; border: none; cursor: pointer; }
+        button:hover { background: #0056b3; }
+    </style>
 </head>
 <body>
     <h1>Contact Us</h1>
-    <form>
-        Name: <input type="text"><br>
-        Email: <input type="email"><br>
-        Message: <textarea></textarea><br>
+    <form onsubmit="return handleSubmit(event)">
+        <div class="form-group">
+            <label>Name:</label>
+            <input type="text" id="name" required>
+        </div>
+        <div class="form-group">
+            <label>Email:</label>
+            <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+            <label>Message:</label>
+            <textarea id="message" rows="4" required></textarea>
+        </div>
         <button type="submit">Submit</button>
+        <div id="success" style="display:none;color:green;margin-top:10px;">✓ Message sent!</div>
     </form>
+
+    <script>
+        function handleSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            if (name && email && message) {
+                document.getElementById('success').style.display = 'block';
+                console.log('Form submitted:', { name, email, message });
+                setTimeout(() => document.getElementById('success').style.display = 'none', 3000);
+            }
+            return false;
+        }
+    </script>
 </body>
 </html>
-
 Add contact form page
