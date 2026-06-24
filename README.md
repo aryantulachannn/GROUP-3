@@ -28,4 +28,6 @@ Reviewer
 
 Documentation Lead
 
+Repository Validation and Sprint Finalization
+
 Each member completed their part of the GitHub workflow.
