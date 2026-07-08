@@ -340,3 +340,31 @@ function filterProducts(){
 
 </body>
 </html>
+.about {
+  padding: 60px 20px;
+  background-color: #111;
+  color: #fff;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.about h1, .about h2 {
+  color: #ff8c00;
+  margin-bottom: 10px;
+}
+
+.about p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about ul {
+  margin-left: 20px;
+}
+
+.about ul li {
+  margin-bottom: 10px;
+}
