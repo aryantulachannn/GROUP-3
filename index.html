@@ -13,29 +13,56 @@
     <div class="logo">EduMart</div>
 
     <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Products</a></li>
-      <li><a href="#">Categories</a></li>
-      <li><a href="#">Deals</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#productList">Products</a></li>
+      <li><a href="#filters">Categories</a></li>
+      <li><a href="#" onclick="openContact()">Contact</a></li>
     </ul>
 
-    <div class="cart">🛒 Cart</div>
+    <div class="cart">🛒 Cart <span id="cartCount">0</span></div>
   </nav>
 </header>
 
-<section class="hero">
+<section class="hero" id="home">
   <div class="hero-content">
     <h1>Student Product Catalogue 2030</h1>
     <p>Smart products for smart students</p>
-    <button>Explore Products</button>
+    <button onclick="document.getElementById('productList').scrollIntoView()">Explore Products</button>
   </div>
 </section>
 
-<section class="filters">
-  <input type="text" id="searchInput" placeholder="Search product...">
+<section class="about" id="about">
+  <h2>About Us</h2>
+  <p>
+    EduMart is a student-focused online product catalogue created for Sprint 3.
+    The website helps students find useful study, assignment, daily use and learning products.
+    This page demonstrates HTML structure, CSS styling, navigation, responsive design,
+    JavaScript filtering, and a contact popup feature.
+  </p>
 
-  <select id="categoryFilter">
+  <div class="about-grid">
+    <div class="about-card">
+      <h3>Our Mission</h3>
+      <p>To provide affordable and useful products for students.</p>
+    </div>
+
+    <div class="about-card">
+      <h3>Our Vision</h3>
+      <p>To become a smart student product catalogue by 2030.</p>
+    </div>
+
+    <div class="about-card">
+      <h3>Why EduMart?</h3>
+      <p>Simple navigation, product search, category filter, and responsive design.</p>
+    </div>
+  </div>
+</section>
+
+<section class="filters" id="filters">
+  <input type="text" id="searchInput" placeholder="Search product..." onkeyup="filterProducts()">
+
+  <select id="categoryFilter" onchange="filterProducts()">
     <option value="all">All Categories</option>
     <option value="study">Study Essential</option>
     <option value="assignment">For Assignments</option>
@@ -43,7 +70,7 @@
     <option value="learning">Learning</option>
   </select>
 
-  <select id="priceFilter">
+  <select id="priceFilter" onchange="filterProducts()">
     <option value="all">All Prices</option>
     <option value="low">Below $100</option>
     <option value="medium">$100 - $500</option>
@@ -62,7 +89,7 @@
       <h3>Wireless Headphones</h3>
       <p>Perfect for online classes and study sessions.</p>
       <h4>$129.99</h4>
-      <button>Add to Cart</button>
+      <button onclick="addToCart()">Add to Cart</button>
     </div>
   </div>
 
@@ -73,7 +100,7 @@
       <h3>Student Laptop</h3>
       <p>Lightweight laptop for study, coding and research.</p>
       <h4>$799.99</h4>
-      <button>Add to Cart</button>
+      <button onclick="addToCart()">Add to Cart</button>
     </div>
   </div>
 
@@ -84,7 +111,7 @@
       <h3>University Backpack</h3>
       <p>Strong backpack for books and laptop.</p>
       <h4>$59.99</h4>
-      <button>Add to Cart</button>
+      <button onclick="addToCart()">Add to Cart</button>
     </div>
   </div>
 
@@ -95,11 +122,25 @@
       <h3>Study Books</h3>
       <p>Useful books for exam preparation.</p>
       <h4>$39.99</h4>
-      <button>Add to Cart</button>
+      <button onclick="addToCart()">Add to Cart</button>
     </div>
   </div>
 
 </section>
+
+<div class="contact-popup" id="contactPopup">
+  <div class="contact-box">
+    <h2>Contact EduMart</h2>
+    <p>Send us your enquiry below.</p>
+
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <textarea rows="4" placeholder="Your Message"></textarea>
+
+    <button class="send-btn">Send Message</button>
+    <button class="close-btn" onclick="closeContact()">Close</button>
+  </div>
+</div>
 
 <footer>
   <p>© 2030 EduMart Student Store. All Rights Reserved.</p>
@@ -108,13 +149,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-      
-    
-
-    
-  
-    
-    
-
-
-           
