@@ -36,3 +36,8 @@ contact.html	Contact page	Project Team	HTML
 style.css	Website styling	Project Team	CSS
 script.js	Website functionality	Project Team	JavaScript
 product module.txt	Product catalogue information	Project Team	TXT
+
+
+
+
+
