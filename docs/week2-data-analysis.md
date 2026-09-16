@@ -51,7 +51,7 @@ This diagram shows how users interact with the Student Product Catalogue website
 
 
 
-## Data Risk Analysis
+## 3. Data Risk Analysis
 
 The EduMart website collects and processes product and user interaction data. The following table identifies potential risks associated with this data.
 
