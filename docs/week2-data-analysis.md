@@ -41,3 +41,10 @@ product module.txt	Product catalogue information	Project Team	TXT
 
 
 
+## 2. Data Flow Diagram
+2
+ 
+3
+![Data Flow Diagram](data-flow-diagramption
+4
+This diagram shows how users interact with the Student Product Catalogue website, how the website loads HTML, CSS, JavaScript, and product data, and how information is displayed back to users.
