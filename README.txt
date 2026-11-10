@@ -93,3 +93,5 @@ A public deployment requires separate backend hosting, HTTPS, durable database
 storage/backups, spam controls and appropriate privacy handling.
 Do not publish real enquiry records, databases or credentials in a public repository.
 No credentials or email service are included.
+
+thank you
